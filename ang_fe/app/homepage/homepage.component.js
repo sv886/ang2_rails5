@@ -15,8 +15,8 @@ var HomepageComponent = /** @class */ (function () {
     }
     HomepageComponent = __decorate([
         core_1.Component({
-            selector: 'main-app',
-            template: '<h1>Alo Werld</h1>'
+            selector: 'homepage',
+            template: '<h1>Home</h1>'
         })
         // notice naming convention btwn filename and class name
     ], HomepageComponent);
@@ -24,5 +24,6 @@ var HomepageComponent = /** @class */ (function () {
 }());
 exports.HomepageComponent = HomepageComponent;
 // Will act as a master application component that everything else
-// will flow through. Think of HomepageComponent as a Rails controller.
+// will flow through. Think of our HomepageComponent as simliar to
+// the Rails application controller.
 //# sourceMappingURL=homepage.component.js.map

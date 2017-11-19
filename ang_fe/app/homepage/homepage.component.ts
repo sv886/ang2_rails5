@@ -4,8 +4,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'main-app',
-  template: '<h1>Alo Werld</h1>'
+  selector: 'homepage',
+  template: '<h1>Home</h1>'
 })
 
 // notice naming convention btwn filename and class name

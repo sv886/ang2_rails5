@@ -21,4 +21,7 @@ var AppComponent = /** @class */ (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+// Will act as a master application component that everything else
+// will flow through. Think of our AppComponent as simliar to
+// the Rails application controller.
 //# sourceMappingURL=app.component.js.map

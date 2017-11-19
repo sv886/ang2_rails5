@@ -23,7 +23,4 @@ var HomepageComponent = /** @class */ (function () {
     return HomepageComponent;
 }());
 exports.HomepageComponent = HomepageComponent;
-// Will act as a master application component that everything else
-// will flow through. Think of our HomepageComponent as simliar to
-// the Rails application controller.
 //# sourceMappingURL=homepage.component.js.map

@@ -10,3 +10,7 @@ import { Component } from '@angular/core';
 
 // notice naming convention btwn filename and class name
 export class HomepageComponent {}
+
+// Will act as a master application component that everything else
+// will flow through. Think of our HomepageComponent as simliar to
+// the Rails application controller.

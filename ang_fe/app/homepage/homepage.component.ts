@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'homepage',
-  template: '<h1>Home</h1>'
+  template: '<h1>Homepage</h1>'
 })
 
 // notice naming convention btwn filename and class name

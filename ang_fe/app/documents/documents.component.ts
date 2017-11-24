@@ -8,6 +8,7 @@ import { Document } from './document'
 })
 
 export class DocumentsComponent {
+  pageTitle: string = "Document Dashboard"
   // will eventually call Rails API here, docs hardcoded for now
   // create Documents array with JS objects
   documents: Document[] = [

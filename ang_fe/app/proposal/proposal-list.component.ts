@@ -18,6 +18,7 @@ export class ProposalListComponent {
     150, 120, 15, 'john@doe.com')
 
   proposals: Proposal[] = [
+    // this similar to Rails self
     this.proposalOne,
     this.proposalTwo,
     this.proposalThree

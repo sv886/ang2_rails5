@@ -1,4 +1,4 @@
-// Note we're using a Class w Proposal model,
+// Note we're using a Class w Proposal model (allowing for CRUD capabilities w Proposal objects),
 // not an Interface like we used w Documents.
 
 export class Proposal {

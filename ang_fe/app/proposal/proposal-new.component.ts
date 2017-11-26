@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Proposal } from './proposal';
 
 @Component({
   moduleId: module.id,
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: 'proposal-new.component.html'
 })
 
-export class ProposalNewComponent {}
+export class ProposalNewComponent {
+  // create new empty Proposal object
+  proposal = new Proposal;
+}

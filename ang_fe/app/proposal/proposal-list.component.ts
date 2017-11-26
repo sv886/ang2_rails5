@@ -16,4 +16,10 @@ export class ProposalListComponent {
     150, 120, 15, 'john@doe.com')
   proposalThree: Proposal = new Proposal(999, 'Algo Empresa', 'http://portfolio.joe-schmo.com', 'Ruby on Rails',
     150, 120, 15, 'john@doe.com')
+
+  proposals: Proposal[] = [
+    this.proposalOne,
+    this.proposalTwo,
+    this.proposalThree
+  ]
 }

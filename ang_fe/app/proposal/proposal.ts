@@ -1,3 +1,6 @@
+// Note we're using a Class w Proposal model,
+// not an Interface like we used w Documents.
+
 export class Proposal {
   constructor(
     public id?: number,

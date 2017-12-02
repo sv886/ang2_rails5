@@ -1,3 +1,7 @@
 ang_fe/node_modules
 ang_fe/**/*.js
 ang_fe/**/*.map
+
+
+
+!ang_fe/systemjs.config.js

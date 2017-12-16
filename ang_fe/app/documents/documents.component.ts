@@ -7,7 +7,9 @@ import { DocumentService } from './document.service';
   moduleId: module.id,
   selector: 'documents',
   templateUrl: 'documents.component.html',
-  styleUrls: ['documents.component.css']
+  styleUrls: ['documents.component.css'],
+  // Component needs to know what is providing the json data
+  providers: [ DocumentService ]
 })
 
 export class DocumentsComponent implements OnInit {

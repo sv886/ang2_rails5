@@ -9,8 +9,9 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 // programming using Observables to make it easier to compose asynchronous
 // or callback-based code.
 import { Observable } from 'rxjs/Observable';
+import { Document } from './document';
 
 @Injectable()
 export class DocumentService {
-
+  private documentsUrl = 'http://localhost:3001/freelance_documents.json';
 }

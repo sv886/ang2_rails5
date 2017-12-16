@@ -11,6 +11,11 @@ export class ProposalService {
     private http: Http
   ) {}
 
+  // ################################################################
+  //
+  // Proposals (work with API index)
+  //
+  // ################################################################
   // function will return an observable that returns an array of documents.
   // Note the argument syntax: Observable<arg>
   getProposals(): Observable<Proposal[]> {
@@ -19,6 +24,15 @@ export class ProposalService {
                     // send request, get response and convert to json
                     .map((response: Response) => <Proposal[]>response.json())
                     .catch(this.handleError);
+  }
+
+  // ################################################################
+  //
+  // Proposal (work with API show)
+  //
+  // ################################################################
+  getProposal(id: number) {
+    return this.http.get(this.proposalsUrl + '/' + id + '.json')
   }
 
   // Include error handling code from Angular docs

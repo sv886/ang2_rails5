@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do |p|
+  Proposal.create!(
+    customer: "Customer #{p}",
+    portfolio_url: 'http://sebvillarreal.com',
+    tools: 'Ruby on Rails, Angular 2, Postgres',
+    estimated_hours: (80 + p),
+    hourly_rate: 120,
+    weeks_to_complete: (8 + p),
+    client_email: 'client@example.com',
+  )
+end
+
+# rails g scaffold Proposal customer:string portfolio_url:string tools:string estimated_hours:decimal hourly_rate:decimal weeks_to_complete:integer client_email:string

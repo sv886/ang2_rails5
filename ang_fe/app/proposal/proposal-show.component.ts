@@ -23,13 +23,15 @@ export class ProposalShowComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
+  @Input()
+  proposal: Proposal;
+
   ngOnInit(): void {
-    // here we'll get id via params then set above
-    // subscribe gives us access to route params
-    this.routeId = this.route.params.subscribe(
-      params => {
-        this.id = +params['id'];
-      }
-    )
+    // calls #proposalService, gets id from params and
+    // stores in proposalRequest variable
+    let proposalRequest = this.route.params
+        .flatMap((params: Params) =>
+          this.proposalService.getProposal(+params['id']));
+    proposalRequest.subscribe(response => this.proposal = response.json());
   }
 }

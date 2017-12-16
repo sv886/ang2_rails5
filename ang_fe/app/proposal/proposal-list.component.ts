@@ -11,6 +11,25 @@ import { ProposalService } from './proposal.service';
   providers: [ ProposalService ]
 })
 
-export class ProposalListComponent {
+export class ProposalListComponent implements OnInit {
   proposals: Proposal[];
+  errorMessage: string;
+  mode = "Observable";
+
+  constructor(
+    private proposalService: ProposalService
+  ) {}
+
+  ngOnInit() {
+    let timer = Observable.timer(0, 5000);
+    timer.subscribe(() => this.getProposals());
+  }
+
+  getProposals() {
+    this.proposalService.getProposals()
+        .subscribe(
+          proposals => this.proposals = proposals,
+          error => this.errorMessage = <any>error
+        )
+  }
 }

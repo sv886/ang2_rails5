@@ -25,7 +25,9 @@ export class DocumentsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
+    // 0 start right away, call API every 5 seconds for dynamic updates
+    let timer = Observable.timer(0, 5000);
+    timer.subscribe(() => this.getDocuments());
   }
 
   // Why another #getDocuments function? This one will be specific

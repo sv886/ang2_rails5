@@ -14,13 +14,12 @@ import { ProposalService } from './proposal.service';
 })
 
 export class ProposalShowComponent implements OnInit {
-  id: number;
-  routeId: any;
-
   constructor(
     // using 'dependecy injection', let component know as soon as a class is
     // instantiated (someone goes to show page), constructor is called and an
-    // instance of the activated route is stored in this arg for future use
+    // instance of the follow declarations is stored in this arg for future use
+    private http: Http,
+    private proposalService: ProposalService,
     private route: ActivatedRoute
   ) {}
 

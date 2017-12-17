@@ -5,7 +5,7 @@
 
       <div>
         <!-- #proposalForm="ngForm" sets name and type of form  -->
-        <form #proposalForm="ngForm">
+        <form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm">
           <div class="form-group">
             <label for="customer">Customer Name</label>
             <!--  Last 2 lines we set input value the Angular way -->

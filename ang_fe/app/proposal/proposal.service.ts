@@ -49,6 +49,11 @@ export class ProposalService {
       headers: headers}).map((res: Response) => res.json());
   }
 
+  // ################################################################
+  //
+  // Angular Error Handler
+  //
+  // ################################################################
   // Include error handling code from Angular docs
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure

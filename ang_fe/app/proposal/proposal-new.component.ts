@@ -11,4 +11,5 @@ import { Proposal } from './proposal';
 export class ProposalNewComponent {
   // create new empty Proposal object
   proposal = new Proposal;
+  submitted: boolean = false;
 }

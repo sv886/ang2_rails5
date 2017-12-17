@@ -35,6 +35,20 @@ export class ProposalService {
     return this.http.get(this.proposalsUrl + '/' + id + '.json')
   }
 
+  // ################################################################
+  //
+  // Create New Proposal (work with API new/create)
+  //
+  // ################################################################
+  createProposal(proposal) {
+    // set headers hash that Rails API is expecting "Hey Rails, I'm sending json data"
+    let headers = new Headers({ 'Content-Type': 'application/json'});
+    let options = new RequestOptions({ headers: headers });
+    // POST to our Proposals API with our JSON formatted new proposal object
+    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {
+      headers: headers}).map((res: Response) => res.json());
+  }
+
   // Include error handling code from Angular docs
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure

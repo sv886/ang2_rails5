@@ -38,4 +38,17 @@ export class ProposalNewComponent {
   constructor(
     private proposalService: ProposalService
   ) {}
+
+  createProposal(proposal) {
+    // flip boolean that hides form submit button
+    this.submitted = true;
+    this.proposalService.createProposal(proposal)
+        .subscribe(
+          data => { return true },
+          error => {
+            console.log('Error saving proposal');
+            return Observable.throw(error);
+          }
+        );
+  }
 }

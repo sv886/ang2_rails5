@@ -124,6 +124,12 @@
             >
           </div>
 
+          <button type="submit"
+                  class="btn btn-outline-primary btn-lg"
+                  [disabled]="!proposalForm.form.valid"
+          >
+            Generate Proposal
+          </button>
 
         </form>
       </div>

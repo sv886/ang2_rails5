@@ -1,9 +1,21 @@
+// ################################################################
+//
+// Dependencies
+//
+// ################################################################
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { Proposal } from './proposal';
 import { ProposalService } from './proposal.service';
 
+
+
+// ################################################################
+//
+// Decorator
+//
+// ################################################################
 @Component({
   moduleId: module.id,
   selector: 'proposal-list',
@@ -12,6 +24,13 @@ import { ProposalService } from './proposal.service';
   providers: [ ProposalService ]
 })
 
+
+
+// ################################################################
+//
+// Component
+//
+// ################################################################
 export class ProposalListComponent implements OnInit {
   proposals: Proposal[];
   errorMessage: string;
